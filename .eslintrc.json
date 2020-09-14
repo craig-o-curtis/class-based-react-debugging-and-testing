@@ -1,0 +1,36 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "quotes": "off"
+  },
+  "overrides": [
+    {
+      "files": ["*.test.js"],
+      "rules": {
+        "react/jsx-filename-extension": "off"
+      }
+    },
+    {
+      "files": ["*.jsx"],
+      "rules": {
+        "react/forbid-prop-types": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "arrow-body-style": "off"
+      }
+    }
+  ]
+}
